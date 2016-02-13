@@ -18,6 +18,8 @@ import android.widget.ArrayAdapter;
 import android.widget.GridView;
 import android.widget.ListView;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -26,7 +28,14 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         GridView grid=(GridView)findViewById(R.id.grid1);
-        grid.setAdapter(new ImageAdapter(this));
+
+        ArrayList<Integer> image_list= new ArrayList<>();
+        image_list.add(R.drawable.images);
+        image_list.add(R.drawable.images1);
+        image_list.add(R.drawable.images2);
+        image_list.add(R.drawable.images3);
+
+        grid.setAdapter(new ImageAdapter(this,R.layout.grid_item_layout,image_list));
 
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);

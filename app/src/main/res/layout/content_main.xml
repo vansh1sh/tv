@@ -11,12 +11,14 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="app.com.example.vansh.onlinefreetv.MainActivity"
     tools:showIn="@layout/app_bar_main">
-    
-    
-    
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="" />
+
+    <GridView
+        android:id="@+id/grid1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:verticalSpacing="0dp"
+        android:horizontalSpacing="0dp"
+        android:stretchMode="columnWidth"
+        android:numColumns="2"/>
 
 </RelativeLayout>
