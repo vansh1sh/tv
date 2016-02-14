@@ -11,21 +11,50 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+
 /**
  * Created by vansh on 10-Feb-16.
  */
 public class CricketClass extends Activity {
 
 
-    static String listitem[]={"Cricket-Link 1","Cricket-Link 2","Cricket-Link 3","Cricket-Link 4","Cricket-Link 5"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.cricket_main);
+
+        int posn;
+
+        switch(getIntent().getStringExtra("sport")){
+            case "wwe":
+                posn = 0;
+                break;
+            case "fubu":
+                posn = 5;
+                break;
+            default:
+                posn = 0;
+                break;
+        }
+
+        ArrayList<String> listitem=new ArrayList<>();
+        listitem.add("Cricket-Link 1");
+        listitem.add("Cricket-Link 2");
+        listitem.add("Cricket-Link 3");
+        listitem.add("Cricket-Link 4");
+        listitem.add("Cricket-Link 5");
+        listitem.add("Football-Link 1");
+        listitem.add("Football-Link 2");
+        listitem.add("Football-Link 3");
+        listitem.add("Football-Link 4");
+        listitem.add("Football-Link 5");
+
         ListView list=(ListView)findViewById(R.id.hi);
-        ArrayAdapter<String> adapter=new ArrayAdapter<String>(this,R.layout.list_cricket,listitem);
-        list.setAdapter(adapter);
+        ItemAdapter itemAdapter=new ItemAdapter(this,R.id.list,listitem,posn);
+        list.setAdapter(itemAdapter);
         Intent it=getIntent();
 
 

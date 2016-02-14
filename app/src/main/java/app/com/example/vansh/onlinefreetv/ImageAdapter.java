@@ -48,11 +48,18 @@ public class ImageAdapter extends ArrayAdapter {
         holder.image.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent(convertView.getContext(),CricketClass.class);
                 switch (position){
                     case 0:
-                        Intent intent = new Intent(convertView.getContext(),CricketClass.class);
-                        convertView.getContext().startActivity(intent);
+
+                        intent.putExtra("sport", "wwe");
+
+
+                    case 1:
+                        intent.putExtra("sport", "fubu");
+
                 }
+                convertView.getContext().startActivity(intent);
             }
         });
 
