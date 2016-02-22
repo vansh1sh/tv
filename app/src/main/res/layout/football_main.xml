@@ -9,6 +9,6 @@
         android:layout_height="match_parent"
         android:minHeight="2dp"
         android:minWidth="3dp"
-        android:id="@+id/hi"/>
+        android:id="@+id/hi1"/>
 
 </LinearLayout>

@@ -6,14 +6,15 @@ import android.os.Bundle;
 import android.webkit.WebView;
 
 /**
- * Created by vansh on 11-Feb-16.
+ * Created by vansh on 22-Feb-16.
  */
-public class WebviewCricket extends Activity {
+public class WebviewFootball extends Activity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.cricket_webview);
-        WebView web=(WebView)findViewById(R.id.webView);
+        setContentView(R.layout.football_webview);
+        WebView web=(WebView)findViewById(R.id.webView1);
         web.loadUrl("http://onlinefreetv.org/cricket/link1.php");
         Intent it1=getIntent();
 

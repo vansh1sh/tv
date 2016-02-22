@@ -3,7 +3,6 @@ package app.com.example.vansh.onlinefreetv;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.Snackbar;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -12,16 +11,16 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 /**
- * Created by vansh on 10-Feb-16.
+ * Created by vansh on 22-Feb-16.
  */
-public class CricketClass extends Activity {
+public class FootballClass extends Activity {
 
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.cricket_main);
+        setContentView(R.layout.football_main);
 
         int posn;
 
@@ -38,15 +37,15 @@ public class CricketClass extends Activity {
         }
 
         ArrayList<String> listitem=new ArrayList<>();
-        listitem.add("Sports-Link 1");
-        listitem.add("Sports-Link 2");
-        listitem.add("Sports-Link 3");
-        listitem.add("Sports-Link 4");
-        listitem.add("Sports-Link 5");
+        listitem.add("Football-Link 1");
+        listitem.add("Football-Link 2");
+        listitem.add("Football-Link 3");
+        listitem.add("Football-Link 4");
+        listitem.add("Football-Link 5");
 
 
 
-        ListView list=(ListView)findViewById(R.id.hi);
+        ListView list=(ListView)findViewById(R.id.hi1);
         ItemAdapter itemAdapter=new ItemAdapter(this,R.id.list,listitem,posn);
         list.setAdapter(itemAdapter);
         Intent it=getIntent();
@@ -55,10 +54,10 @@ public class CricketClass extends Activity {
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(CricketClass.this,"Links are currently under maintenance",
+                Toast.makeText(FootballClass.this, "Links are currently under maintenance",
                         Toast.LENGTH_LONG).show();
 
-                Intent it1=new Intent(CricketClass.this,WebviewCricket.class);
+                Intent it1=new Intent(FootballClass.this,WebviewFootball.class);
                 startActivity(it1);
 
 
@@ -70,3 +69,4 @@ public class CricketClass extends Activity {
 
     }
 }
+

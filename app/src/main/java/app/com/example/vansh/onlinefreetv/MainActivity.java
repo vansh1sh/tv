@@ -1,6 +1,5 @@
 package app.com.example.vansh.onlinefreetv;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -13,10 +12,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.GridView;
-import android.widget.ListView;
 
 import java.util.ArrayList;
 
@@ -32,8 +28,6 @@ public class MainActivity extends AppCompatActivity
         ArrayList<Integer> image_list= new ArrayList<>();
         image_list.add(R.drawable.images);
         image_list.add(R.drawable.images1);
-        image_list.add(R.drawable.images2);
-        image_list.add(R.drawable.images3);
 
         grid.setAdapter(new ImageAdapter(this,R.layout.grid_item_layout,image_list));
 

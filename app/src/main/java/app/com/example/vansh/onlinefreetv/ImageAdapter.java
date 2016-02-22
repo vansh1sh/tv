@@ -7,10 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.BaseAdapter;
-import android.widget.GridView;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -48,18 +45,21 @@ public class ImageAdapter extends ArrayAdapter {
         holder.image.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(convertView.getContext(),CricketClass.class);
+
                 switch (position){
                     case 0:
+                        Intent intent = new Intent(convertView.getContext(),CricketClass.class);
+                        convertView.getContext().startActivity(intent);
 
-                        intent.putExtra("sport", "wwe");
 
 
                     case 1:
-                        intent.putExtra("sport", "fubu");
+                        Intent intent1 = new Intent(convertView.getContext(),CricketClass.class);
+                        convertView.getContext().startActivity(intent1);
+
 
                 }
-                convertView.getContext().startActivity(intent);
+
             }
         });
 
