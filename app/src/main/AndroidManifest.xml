@@ -18,8 +18,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".FootballClass" android:label="cricket class"></activity>
         <activity android:name=".CricketClass" android:label="cricket class"></activity>
         <activity android:name=".WebviewCricket" android:label="webview cricket" ></activity>
+        <activity android:name=".WebviewFootball" android:label="webview cricket" ></activity>
     </application>
 
 </manifest>
