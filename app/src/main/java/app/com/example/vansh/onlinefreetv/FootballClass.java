@@ -3,6 +3,7 @@ package app.com.example.vansh.onlinefreetv;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -22,7 +23,7 @@ public class FootballClass extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.football_main);
 
-        int posn;
+        /*int posn;
 
         switch(getIntent().getStringExtra("sport")){
             case "wwe":
@@ -35,7 +36,7 @@ public class FootballClass extends Activity {
                 posn = 0;
                 break;
         }
-
+*/
         ArrayList<String> listitem=new ArrayList<>();
         listitem.add("Football-Link 1");
         listitem.add("Football-Link 2");
@@ -46,7 +47,7 @@ public class FootballClass extends Activity {
 
 
         ListView list=(ListView)findViewById(R.id.hi1);
-        ItemAdapter itemAdapter=new ItemAdapter(this,R.id.list,listitem,posn);
+        ItemAdapter itemAdapter=new ItemAdapter(this,R.id.list,listitem);
         list.setAdapter(itemAdapter);
         Intent it=getIntent();
 

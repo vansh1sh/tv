@@ -54,7 +54,7 @@ public class ImageAdapter extends ArrayAdapter {
 
 
                     case 1:
-                        Intent intent1 = new Intent(convertView.getContext(),CricketClass.class);
+                        Intent intent1 = new Intent(convertView.getContext(),FootballClass.class);
                         convertView.getContext().startActivity(intent1);
 
 

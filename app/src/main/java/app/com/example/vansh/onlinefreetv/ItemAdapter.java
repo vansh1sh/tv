@@ -23,7 +23,7 @@ public class ItemAdapter extends ArrayAdapter<String> {
     * the only variable we care about now is ArrayList<Item> objects,
     * because it is the list of objects we want to display.
     */
-    public ItemAdapter(Context context, int textViewResourceId, ArrayList<String> objects, int posn) {
+    public ItemAdapter(Context context, int textViewResourceId, ArrayList<String> objects/*, int posn*/) {
         super(context, textViewResourceId, objects);
         this.start_position = start_position;
         this.objects = objects;
